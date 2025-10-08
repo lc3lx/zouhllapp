@@ -9,10 +9,10 @@ class EnvVariables {
   String _envType = "";
   Future<void> init({required EnvTypeEnum envType}) async {
     switch (envType) {
-      case EnvType.prod:
+      case EnvTypeEnum.prod:
         await dotenv.load(fileName: ".env.prod");
 
-      case EnvType.dev:
+      case EnvTypeEnum.dev:
         await dotenv.load(fileName: ".env.dev");
     }
     _envType = dotenv.get("ENV_TYPE");
