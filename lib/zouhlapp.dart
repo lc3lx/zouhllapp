@@ -32,7 +32,12 @@ class zouhlapp extends StatelessWidget {
               },
               home: Scaffold(
                 appBar: AppBar(title: Text('Zouhlapp')),
-                body: Center(child: Text('Hello, World!')),
+                body: Column(
+                  children: [
+                    Text("Old font", style: TextStyle(fontSize: 20)),
+                    Text("تجربة الخط", style: TextStyle(fontSize: 20)),
+                  ],
+                ),
               ),
             ),
           );
