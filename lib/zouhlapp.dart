@@ -1,6 +1,8 @@
 import 'package:app/core/common/screens/no_network_screen.dart';
 import 'package:app/core/app/connectivity_controller.dart';
 import 'package:app/core/routes/app_routes.dart';
+import 'package:app/core/theme/app_theme.dart' as AppTheme;
+import 'package:app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,9 +20,7 @@ class zouhlapp extends StatelessWidget {
             child: MaterialApp(
               title: 'Zouhlapp',
               debugShowCheckedModeBanner: false,
-              theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              ),
+              theme: themeLight(),
               builder: (context, widget) {
                 return Scaffold(
                   body: Builder(
