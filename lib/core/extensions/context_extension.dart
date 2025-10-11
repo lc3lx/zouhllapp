@@ -1,3 +1,4 @@
+import 'package:app/core/language/app_localizations.dart';
 import 'package:app/core/theme/color_extension.dart';
 import 'package:app/core/theme/image_extensions.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,11 @@ extension ContextExt on BuildContext {
   MyColors get colors => Theme.of(this).extension<MyColors>()!;
   //images
   MyImages get images => Theme.of(this).extension<MyImages>()!;
+  //language
+  String translate(String key) {
+    return AppLocalizations.of(this)!.translate(key).toString();
+  }
+
   //navigator
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.pushNamed(this, routeName, arguments: arguments);
