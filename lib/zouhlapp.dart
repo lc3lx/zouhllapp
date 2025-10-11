@@ -1,5 +1,6 @@
 import 'package:app/core/common/screens/no_network_screen.dart';
 import 'package:app/core/app/connectivity_controller.dart';
+import 'package:app/core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,15 +31,8 @@ class zouhlapp extends StatelessWidget {
                   ),
                 );
               },
-              home: Scaffold(
-                appBar: AppBar(title: Text('Zouhlapp')),
-                body: Column(
-                  children: [
-                    Text("Old font", style: TextStyle(fontSize: 20)),
-                    Text("تجربة الخط", style: TextStyle(fontSize: 20)),
-                  ],
-                ),
-              ),
+              onGenerateRoute: AppRoutes.onGenerateRoute,
+              initialRoute: AppRoutes.testOne,
             ),
           );
         } else {
